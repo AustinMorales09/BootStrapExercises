@@ -40,7 +40,7 @@
     width: 100px;
   }
 </style>
-
+<div class="container-fluid">
 <h2 class="red-text">CatPhotoApp</h2>
 
 <p>Click here for <a href="#">cat photos</a>.</p>
@@ -68,7 +68,7 @@
   <input type="text" placeholder="cat photo URL" required>
   <button type="submit">Submit</button>
 </form>
-
+</div>
 
 <!-- 2 Bootstrap: Make Images Mobile Responsive-->
 <!-- 
@@ -111,7 +111,7 @@ Fortunately, with Bootstrap, all we need to do is add the img-responsive class t
   <p>Click here for <a href="#">cat photos</a>.</p>
 
   <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
+<img src="https://bit.ly/fcc-running-cats" alt="" class="img-responsive">
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -169,7 +169,7 @@ Remember that you can add several classes to the same element by separating each
 </style>
 
 <div class="container-fluid">
-  <h2 class="red-text">CatPhotoApp</h2>
+  <h2 class="red-text text-center">CatPhotoApp</h2>
 
   <p>Click here for <a href="#">cat photos</a>.</p>
 
@@ -237,7 +237,7 @@ Remember that you can add several classes to the same element by separating each
    <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
  
    <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
- 
+  <button class="btn btn-default">Like</button>
    <p>Things cats love:</p>
    <ul>
      <li>cat nip</li>
@@ -310,7 +310,9 @@ This button would take up 100% of the available width. -->
   <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
-  <button class="btn btn-default">Like</button>
+
+
+  <button class="btn btn-default btn-block">Like</button>
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -375,7 +377,7 @@ Note that this button will still need the btn and btn-block classes. -->
   <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
-  <button class="btn btn-default btn-block">Like</button>
+  <button class="btn btn-primary btn-block">Like</button>
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -441,6 +443,7 @@ Note that these buttons still need the btn and btn-block classes. -->
 
   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
   <button class="btn btn-block btn-primary">Like</button>
+  <button class="btn btn-block btn-info">Info</button>
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -496,14 +499,13 @@ Note that these buttons still need the btn and btn-block classes. -->
 
 <div class="container-fluid">
   <h2 class="red-text text-center">CatPhotoApp</h2>
-
   <p>Click here for <a href="#">cat photos</a>.</p>
 
   <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
   <button class="btn btn-block btn-primary">Like</button>
   <button class="btn btn-block btn-info">Info</button>
+  <button class="btn btn-block btn-danger">Delete</button>
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -569,9 +571,25 @@ The row class is applied to a div, and the buttons themselves can be nested with
   <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
-  <button class="btn btn-block btn-primary">Like</button>
-  <button class="btn btn-block btn-info">Info</button>
-  <button class="btn btn-block btn-danger">Delete</button>
+
+  <div class="row">
+
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-primary">Like</button>
+        </div>
+
+          <div class="col-xs-4">
+            <button class="btn btn-block btn-info">Info</button>
+           </div>
+
+        <div class="col-xs-4">
+      <button class="btn btn-block btn-danger">Delete</button>
+    </div>
+
+  </div>
+
+
+
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -604,18 +622,13 @@ Then delete the p element that contains a dead link. Then remove the red-text cl
 Finally, remove the "smaller-image" class from your first img element and replace it with the img-responsive class. -->
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
-  .red-text {
-    color: red;
-  }
+  
 
   h2 {
     font-family: Lobster, Monospace;
   }
 
-  p {
-    font-size: 16px;
-    font-family: Monospace;
-  }
+ 
 
   .thick-green-border {
     border-color: green;
@@ -624,17 +637,15 @@ Finally, remove the "smaller-image" class from your first img element and replac
     border-radius: 50%;
   }
 
-  .smaller-image {
-    width: 100px;
-  }
+  
 </style>
 
 <div class="container-fluid">
-  <h2 class="red-text text-center">CatPhotoApp</h2>
+  <h2 class="text-primary text-center">CatPhotoApp</h2>
 
-  <p>Click here for <a href="#">cat photos</a>.</p>
+ 
 
-  <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
   <div class="row">
@@ -713,7 +724,7 @@ Here's how you would do this with the "Top 3 things cats hate" element:
       <button class="btn btn-block btn-danger">Delete</button>
     </div>
   </div>
-  <p>Things cats love:</p>
+  <p>Things cats <span class="text-danger"> love:</span></p>
   <ul>
     <li>cat nip</li>
     <li>laser pointers</li>
